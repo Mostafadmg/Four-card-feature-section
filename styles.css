@@ -130,6 +130,15 @@ p {
   color: #6a7178;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 @media (min-width: 48rem) {
   section {
     width: 100%;
@@ -186,14 +195,27 @@ p {
 }
 
 @media (min-width: 90rem) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
   section {
-    width: 100%;
+    width: 60%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto; /* 2 rows */
     gap: 2rem;
     justify-items: center;
     align-items: center;
+    max-width: 1200px; /* ✅ limit width */
+    margin: 0 auto; /* ✅ center horizontally */
+  }
+  header {
+    max-width: 1200px; /* same as section */
+    margin: 0 auto; /* center horizontally */
+    text-align: center;
   }
 
   .supervisor-card {
